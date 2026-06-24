@@ -1,1 +1,178 @@
+Vou compatilhar informações sobre a agricultura brasileira<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Culturas do Brasil</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<header>
+    <h1>🇧🇷 Culturas do Brasil</h1>
+    <p>Conheça tradições, costumes e curiosidades das diversas regiões brasileiras.</p>
+</header>
+
+<nav>
+    <a href="#norte">Norte</a>
+    <a href="#nordeste">Nordeste</a>
+    <a href="#centro">Centro-Oeste</a>
+    <a href="#sudeste">Sudeste</a>
+    <a href="#sul">Sul</a>
+</nav>
+
+<main>
+
+<section id="norte" class="card">
+    <h2>🌿 Região Norte</h2>
+    <p>
+        A cultura nortista possui forte influência indígena, refletida na culinária,
+        nas lendas e nas festividades.
+    </p>
+</section>
+
+<section id="nordeste" class="card">
+    <h2>🎉 Região Nordeste</h2>
+    <p>
+        Berço do forró, do frevo e de diversas manifestações culturais populares.
+    </p>
+</section>
+
+<section id="centro" class="card">
+    <h2>🐎 Centro-Oeste</h2>
+    <p>
+        Conhecida pelas tradições sertanejas e pela cultura pantaneira.
+    </p>
+</section>
+
+<section id="sudeste" class="card">
+    <h2>🏙️ Sudeste</h2>
+    <p>
+        Região que reúne grande diversidade cultural e importantes manifestações artísticas.
+    </p>
+</section>
+
+<section id="sul" class="card">
+    <h2>🍇 Sul</h2>
+    <p>
+        Possui forte influência de imigrantes europeus, especialmente italianos e alemães.
+    </p>
+</section>
+
+<section class="curiosidade">
+    <h2>✨ Curiosidade do Dia</h2>
+    <p id="curiosidade-texto">
+        Clique no botão para descobrir uma curiosidade!
+    </p>
+    <button onclick="mostrarCuriosidade()">
+        Mostrar Curiosidade
+    </button>
+</section>
+
+</main>
+
+<footer>
+    <p>© 2026 Culturas do Brasil | Projeto Educacional</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+style.css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(90deg, #009739, #FEDD00);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+nav {
+    background: #002776;
+    text-align: center;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #FEDD00;
+}
+
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.curiosidade {
+    background: #ffffff;
+    text-align: center;
+    padding: 30px;
+    margin-top: 30px;
+    border-radius: 12px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #009739;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #007a2e;
+}
+
+footer {
+    background: #002776;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+script.js
+const curiosidades = [
+    "O Brasil possui mais de 200 línguas indígenas ainda faladas.",
+    "O frevo foi reconhecido como Patrimônio Cultural Imaterial da Humanidade pela UNESCO.",
+    "A Festa Junina é uma das maiores celebrações populares do país.",
+    "O Círio de Nazaré, em Belém, reúne milhões de participantes todos os anos.",
+    "A capoeira combina luta, dança, música e tradição afro-brasileira.",
+    "O chimarrão é uma bebida tradicional muito popular na região Sul."
+];
+
+function mostrarCuriosidade() {
+    const indice = Math.floor(Math.random() * curiosidades.length);
+
+    document.getElementById("curiosidade-texto").innerText =
+        curiosidades[indice];
+}
